@@ -2,28 +2,39 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gaming Micro App</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover"
+    />
+    <meta name="theme-color" content="#120a28" />
+    <meta
+      name="description"
+      content="Stack It — a one-tap stacking game. Drop the block, slice the overhang, and stack as high as you can."
+    />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <title>Stack It</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%23120a28'/%3E%3Crect x='3' y='11' width='10' height='3' fill='%235c3d78'/%3E%3Crect x='4' y='8' width='8' height='3' fill='%23ff4d6d'/%3E%3Crect x='5' y='5' width='6' height='3' fill='%23ffe14a'/%3E%3Crect x='6' y='2' width='4' height='3' fill='%235dff9a'/%3E%3C/svg%3E"
+    />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <main class="app-shell">
-      <h1>Gaming Micro App Template</h1>
-      <p class="subtitle">Replace this starter content with your game UI.</p>
-
-      <section class="play-area" aria-label="Game area">
-        <canvas id="gameCanvas" width="960" height="540"></canvas>
-      </section>
-
-      <section class="notes">
-        <h2>Next steps</h2>
-        <ul>
-          <li>Build your game loop in <code>docs/game.js</code>.</li>
-          <li>Design your HUD/menu in this file.</li>
-          <li>Adjust styles in <code>docs/styles.css</code>.</li>
-        </ul>
-      </section>
-    </main>
+    <div id="stage">
+      <canvas
+        id="gameCanvas"
+        width="180"
+        height="320"
+        role="img"
+        aria-label="Stack It. A block slides above the tower. Tap, click, or press space to drop it."
+      ></canvas>
+    </div>
+    <p class="credit">StudioRApps</p>
+    <p id="status" class="sr-only" aria-live="polite">Tap to start.</p>
+    <noscript>
+      <p class="noscript">Stack It needs JavaScript to play.</p>
+    </noscript>
     <script src="./game.js"></script>
   </body>
 </html>
